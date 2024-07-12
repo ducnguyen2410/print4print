@@ -1,0 +1,261 @@
+* {
+  font-family: "Prompt", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh; /* Ensure body is at least full height */
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  background-image: url("./images/background.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* This makes the background fixed */
+  background-position: center center;
+  position: fixed; /* This ensures the background stays fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(75%);
+  z-index: -1;
+}
+
+body > * {
+  z-index: 2;
+}
+
+.navbar {
+  padding: 10px 50px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background-color: #f1ecce;
+  border-bottom: 2px solid white;
+}
+
+.navbar-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10%;
+  gap: 10px;
+}
+
+.navbar-logo span {
+  color: black;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.navbar-socials {
+  margin-right: 10%;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+}
+
+.navbar-socials a {
+  text-decoration: none;
+}
+
+.navbar-socials a img {
+  border-radius: 50%;
+  background-color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 80%;
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  position: relative;
+}
+
+.intro img {
+  scale: 0.7;
+}
+
+.gif {
+  border-radius: 50%;
+  top: 80px;
+  scale: 0.2 !important;
+  position: absolute;
+}
+
+.intro div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro div span:nth-child(1) {
+  color: white;
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.intro div span:nth-child(2) {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 80%;
+  border-radius: 20px;
+  background-color: #5ef38c;
+  padding: 70px 5%;
+  position: relative;
+}
+
+.first {
+  font-size: 2em;
+  color: #d81159;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.step-box {
+  display: grid;
+  grid-template-columns: 20% 70%;
+}
+
+.first {
+    text-align: center;
+}
+
+.step-box > span:nth-child(1) {
+  color: #747572;
+  font-size: 2.5em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.step-box > span:nth-child(2) {
+  color: #371e30;
+  font-size: 1.5em;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+}
+
+.description > img {
+  position: absolute;
+  scale: 0.7;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.description > img:nth-child(3) {
+  top: -200px;
+  scale: 0.3;
+  left: -250px;
+  rotate: -15deg;
+}
+
+.description > img:nth-child(4) {
+  top: -200px;
+  right: 0;
+  rotate: 30deg;
+}
+
+.ca {
+  margin: 100px auto;
+  width: 80%;
+  background-color: #45503b;
+  border: 3px solid white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.ca span {
+  color: white;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+@media only screen and (max-device-width: 650px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-logo {
+    margin: 0;
+  }
+
+  .navbar-socials {
+    margin: 0;
+  }
+
+  .gif {
+    top: 150px;
+  }
+
+  .intro > div > span {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .description > img {
+    position: static;
+    rotate: 0deg !important;
+  }
+
+}
