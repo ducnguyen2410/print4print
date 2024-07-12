@@ -188,8 +188,6 @@ body > * {
 }
 
 .description > img {
-  position: absolute;
-  scale: 0.7;
   border: 3px solid white;
   border-radius: 10px;
 }
